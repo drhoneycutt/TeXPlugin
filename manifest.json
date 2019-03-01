@@ -1,0 +1,32 @@
+{
+
+  "manifest_version": 2,
+  "name": "LaTeX Symbols",
+  "version": "1.0",
+
+  "description": "Replaces LaTeX symbol code with the corresponding symbols in text boxes",
+
+  "icons": {
+    "48": "icons/alpha-1200.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/alpha-1200.png"
+    },
+    "default_title": "Generate LaTeX",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": [ "button.js" ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "main.js" ]
+    }
+  ]
+
+}
